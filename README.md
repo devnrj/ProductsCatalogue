@@ -12,12 +12,13 @@
       - Go to Properties->Run->Configurations->Default
       - In Start Action Pane, give path for file dump on machine in Arguments text box.
     - Build and Run the project.
-  - How to Run Test
-    - Open Test Explorer
-    - Click on Run All test.
-  - Where to find your code
-    - https://github.com/devnrj/ProductsCatalogue.git
-  - Was it your first time writing a unit test, using a particular framework, etc?
-    - I've written test cases earlier. But yes, its first time writing test cases using NUnit from scratch.
-  - What would you have done differently if you had had more time
-    - I'd would've set Global Exception handling, Dependency Injection and Loggings.
+- How to Run Test
+  - Open Test Explorer
+  - Click on Run All test.
+- Where to find your code
+  - https://github.com/devnrj/ProductsCatalogue.git
+  - use master branch to view the code.
+- Was it your first time writing a unit test, using a particular framework, etc?
+  - I've written test cases earlier. But yes, its first time writing test cases using NUnit from scratch.
+- What would you have done differently if you had had more time
+  - I'd would've set Global Exception handling, Dependency Injection and Loggings.
