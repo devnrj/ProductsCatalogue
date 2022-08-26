@@ -16,7 +16,7 @@
     - Open Test Explorer
     - Click on Run All test.
   - Where to find your code
-    - https://github.com/devnrj/ProductsCatalogue/new/master
+    - https://github.com/devnrj/ProductsCatalogue.git
   - Was it your first time writing a unit test, using a particular framework, etc?
     - I've written test cases earlier. But yes, its first time writing test cases using NUnit from scratch.
   - What would you have done differently if you had had more time
