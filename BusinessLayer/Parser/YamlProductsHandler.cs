@@ -8,7 +8,7 @@ using YamlDotNet.Serialization.NamingConventions;
 
 namespace BusinessLayer.Parser
 {
-	public class YamlProductsHandler : IProductHandler
+	public class YamlProductsHandler : IProductsHandler
 	{
         private List<ProductsYaml> _products { get; set; }
         private IRepository<ProductsYaml> _repo { get; set; }
@@ -26,6 +26,7 @@ namespace BusinessLayer.Parser
 
         public void ImportProducts(FileInfo data)
         {
+            Console.WriteLine("Yaml Product Handler - Import : Started");
             try
             {
                 var deserializer = new YamlDotNet.Serialization.DeserializerBuilder()
@@ -37,15 +38,18 @@ namespace BusinessLayer.Parser
             {
                 throw ex;
             }
+            Console.WriteLine("Yaml Product Handler - Import : Completed");
         }
 
         public void SaveProducts()
         {
+            Console.WriteLine("Yaml Product Handler - Save : Started");
             foreach (ProductsYaml py in _products)
             {
                 Console.WriteLine("Importing: " + py);
             }
             _repo.SaveProducts(_products);
+            Console.WriteLine("Yaml Product Handler - Save : Completed");
         }
     }
 }

@@ -9,7 +9,7 @@ using DataLayer.Repositories;
 
 namespace BusinessLayer.Parser
 {
-	public class JsonProductsHandler : IProductHandler
+	public class JsonProductsHandler : IProductsHandler
 	{
 		private List<ProductsJson> _products { get; set; }
         private IRepository<ProductsJson> _repo { get; set; }
@@ -22,6 +22,7 @@ namespace BusinessLayer.Parser
 
         public void ImportProducts(FileInfo data)
         {
+            Console.WriteLine("JSON Product Handler - Import : Started");
             try
             {
                 JObject o1 = JObject.Parse(File.ReadAllText(data.FullName));
@@ -37,6 +38,7 @@ namespace BusinessLayer.Parser
             {
                 throw ex;
             }
+            Console.WriteLine("JSON Product Handler - Import: Completed");
         }
 
         public IList<object> GetProducts()
@@ -46,11 +48,13 @@ namespace BusinessLayer.Parser
 
         public void SaveProducts()
         {
-            foreach(ProductsJson pj in _products)
+            Console.WriteLine("JSON Product Handler - Save : Started");
+            foreach (ProductsJson pj in _products)
             {
                 Console.WriteLine("Importing: "+pj);
             }
             _repo.SaveProducts(_products);
+            Console.WriteLine("JSON Product Handler - Save : Completed");
         }
     }
 }

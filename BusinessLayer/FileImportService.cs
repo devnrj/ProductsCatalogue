@@ -21,11 +21,10 @@ namespace BusinessLayer
 
                 foreach (FileInfo file in files)
                 {
-                    Console.WriteLine(file.Name);
-                    IProductHandler productHandler = Factory.GetInstance(file.Extension);
-                    if (!(productHandler is null)) {
-                        productHandler.ImportProducts(file);
-                        productHandler.SaveProducts();
+                    IProductsHandler productsHandler = Factory.GetInstance(file.Extension);
+                    if (!(productsHandler is null)) {
+                        productsHandler.ImportProducts(file);
+                        productsHandler.SaveProducts();
                     }
                 }
 

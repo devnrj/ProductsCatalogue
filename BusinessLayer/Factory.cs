@@ -6,9 +6,9 @@ namespace BusinessLayer
 {
 	public static class Factory
 	{
-		public static IProductHandler GetInstance(string extensionName)
+		public static IProductsHandler GetInstance(string extensionName)
 		{
-			IProductHandler handler;
+			IProductsHandler handler;
 			switch (extensionName)
 			{
 				case ".yaml": handler = new YamlProductsHandler();

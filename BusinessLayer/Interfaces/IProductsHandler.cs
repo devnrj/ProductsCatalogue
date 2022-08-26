@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace BusinessLayer.Interfaces
 {
-	public interface IProductHandler
+	public interface IProductsHandler
 	{
 		void ImportProducts(FileInfo data);
 		IList<object> GetProducts();
